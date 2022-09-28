@@ -1,0 +1,25 @@
+using System;
+using System.IO;
+public class kevin
+{
+    public static void Main()
+    {
+        double English,Math,Science,Filipino;
+        
+        Console.Write("English: ");
+        English = Convert.ToDouble(Console.Readline());
+        
+         Console.Write("Math: ");
+        Math = Convert.ToDouble(Console.Readline());
+        
+         Console.Write("Science: ");
+       Science = Convert.ToDouble(Console.Readline());
+        
+         Console.Write("Filipino: ");
+       Filipino = Convert.ToDouble(Console.Readline());
+       
+       double result = (English + Math + Science + Filipino) / 4;
+       Console.Writeline("Average of {0}, {1}, {2}, {3} is: {4} ",
+       English, Math, Science, Filipino, result);
+    }
+}
