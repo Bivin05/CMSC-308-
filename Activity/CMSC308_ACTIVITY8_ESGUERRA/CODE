@@ -1,0 +1,80 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace hashset
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] arr1 = new int[5];
+            int[] arr2 = new int[5];
+            int m1;
+            HashSet<string> myhash1 = new HashSet<string>();
+
+            myhash1.Add("1");
+            myhash1.Add("2");
+            myhash1.Add("3");
+            myhash1.Add("4");
+            myhash1.Add("5");
+
+            Console.WriteLine("Given Hashset1: 1, 2, 3, 4, 5");
+
+            Console.WriteLine("<HashSet1>");
+            for (m1 = 0; m1 < arr1.Length; m1++)
+            {
+                Console.Write("Element {0} : ", m1);
+                arr1[m1] = Convert.ToInt32(Console.ReadLine());
+            }
+
+
+            HashSet<string> myhash2 = new HashSet<string>();
+
+            myhash2.Add("2");
+            myhash2.Add("4");
+            myhash2.Add("6");
+            myhash2.Add("8");
+            myhash2.Add("10");
+
+            Console.WriteLine("\n");
+            Console.WriteLine("Given Hashset2: 2, 4, 6, 8, 10");
+            Console.WriteLine("<HashSet2>");
+
+
+            for (m1 = 0; m1 < arr1.Length; m1++)
+            {
+                Console.Write("Element {0} : ", m1);
+                arr1[m1] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            var resultUnion = myhash1.Union(myhash2);
+            var resultIntersect = myhash1.Intersect(myhash2);
+            var resultExcept = myhash1.Except(myhash2);
+
+            Console.Write("\nUNION: ");
+            foreach (var item in resultUnion)
+            {
+                Console.Write(item + " ");
+            }
+
+
+            Console.Write("\nINTERSECTION: ");
+            foreach (var item in resultIntersect)
+            {
+                Console.Write(item + " ");
+            }
+
+
+            Console.Write("\nSET DIFFERENCE: ");
+            foreach (var item in resultExcept)
+            {
+                Console.Write(item + " ");
+            }
+
+
+            Console.ReadKey();
+        }
+    }
+}
+  
