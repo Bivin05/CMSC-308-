@@ -1,0 +1,51 @@
+package com.java.mypackage;
+
+public class Packageclass {
+	//SOURCE CODE FOR THE PACKAGE CLASS
+	
+
+	//Addition
+    public String addition(double num1, double num2)
+     {
+       double add = num1 + num2;
+       String result = String.format("The sum of %s and %s is %s", num1, num2, add);
+       return result;
+   }
+    //Subtraction
+   public String subtraction(double num1, double num2)
+     {
+       double sub = num1 - num2;
+       String result = String.format("The difference of %s and %s is %s", num1, num2, sub);
+       return result;
+   }
+   //Multiplication
+   public String multiplication(double num1, double num2)
+     {
+       double mul = num1 * num2;
+       String result = String.format("The product of %s and %s is %s", num1, num2, mul);
+       return result;
+   }
+   //Division
+   public String division(double num1, double num2)
+     {
+       double div = num1 / num2;
+       String result = String.format("The quotient of %s and %s is %s", num1, num2, div);
+       return result;
+   }
+   //Exponent
+   public String exponent(double num1, double num2)
+     {
+       double exp = Math.pow(num1, num2);
+       String result = String.format("Exponent of %s and %s is %s", num1, num2, exp);
+       return result;
+   }
+   //Modulo
+   public String modulo(double num1, double num2)
+     {
+       double mod = num1 % num2;
+       String result = String.format("Remainder of %s and %s is %s", num1, num2, mod);
+       return result;
+   }
+}
+
+
